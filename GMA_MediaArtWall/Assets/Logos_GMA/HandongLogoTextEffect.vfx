@@ -38,8 +38,8 @@ MonoBehaviour:
   - title: Logo Shape
     position:
       serializedVersion: 2
-      x: 208
-      y: -153
+      x: 216
+      y: -15
       width: 335
       height: 238
     contents:
@@ -52,7 +52,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -254
     y: -190
-    width: 3308
+    width: 3327
     height: 2674
 --- !u!114 &114350483966674976
 MonoBehaviour:
@@ -148,7 +148,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 4
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -646,7 +646,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614583}
   - {fileID: 8926484042661614585}
   dataType: 0
-  capacity: 200000
+  capacity: 100000
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
@@ -775,7 +775,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"6c7dcd8bc100b9a44ad20cc0f8645dcb","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"6e35572b6359d4940809ce69c5e78b5e","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: mainTexture
@@ -1191,7 +1191,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 233, y: -94}
+  m_UIPosition: {x: 241, y: 44}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -2156,7 +2156,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"6d54d7a820cd0a84db85815ef22ca055","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"1efe4084aac26004aaab2d039d6d1d17","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: texture
@@ -4325,7 +4325,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":0.4000000059604645,"y":5.0,"z":0.4000000059604645}'
+      m_SerializableObject: '{"x":0.4000000059604645,"y":3.0,"z":0.4000000059604645}'
     m_Space: 2147483647
   m_Property:
     name: Scale
@@ -6722,7 +6722,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 5
     m_Space: 2147483647
   m_Property:
     name: newRangeMin
@@ -6756,7 +6756,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 5
+      m_SerializableObject: 10
     m_Space: 2147483647
   m_Property:
     name: newRangeMax
@@ -7037,7 +7037,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 2711, y: 590}
+  m_UIPosition: {x: 2730, y: 547}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -9436,7 +9436,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"4896855f46c629c4592e7854f47fda0c","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"5e7d5d794f185da419f914bbf0e038ba","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: texture
@@ -9770,7 +9770,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:
@@ -9796,7 +9796,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661615069}
       inputSlot: {fileID: 8926484042661614960}
-    position: {x: 2711, y: 500}
+    position: {x: 2730, y: 457}
     expandedSlots: []
     expanded: 1
 --- !u!114 &8926484042661615069
@@ -9824,7 +9824,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 4
     m_Space: 2147483647
   m_Property:
     name: o

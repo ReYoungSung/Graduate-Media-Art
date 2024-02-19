@@ -3734,7 +3734,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"acccaf362ebe1e84585a7a48ff1fc138","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"51e2b3b7db0fdcd49a5c84fe26884866","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: texture
@@ -6221,7 +6221,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"7edb904eceac43c46922ddf57888a6ca","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"51e2b3b7db0fdcd49a5c84fe26884866","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: texture
@@ -12467,7 +12467,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 4.99
+      m_SerializableObject: 0
     m_Space: 2147483647
   m_Property:
     name: frequency
@@ -14005,7 +14005,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 0
+  m_UICollapsed: 1
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:

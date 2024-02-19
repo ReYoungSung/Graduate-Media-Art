@@ -7,8 +7,22 @@ public class LogoTextManager : MonoBehaviour
 {
     public List<VisualEffect> visualEffects = new List<VisualEffect>();
 
-    private int activedLogoNum;
-    private int ColorNum;
+    public List<GameObject> textOfStudentID = new List<GameObject>();
+
+    private int activedLogoNum = 0; 
+    private int ColorNum = 4;
+
+    private bool isActivateLogo = false;
+
+    private void Start()
+    {
+        if(ColorNum == 4)
+        {
+            activedLogoNum = 0;
+            ColorNum = 4;
+        }
+        isActivateLogo = false;
+    }
 
     void Update()
     {
@@ -18,7 +32,7 @@ public class LogoTextManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
-            DestroySphereToRadius();
+            StartCoroutine(DestroySphereToRadius());
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha0)) //한동 로고일 때
@@ -26,12 +40,12 @@ public class LogoTextManager : MonoBehaviour
             activedLogoNum = 0;
             StartCoroutine(ActivateLogo());
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha1)) //숫자 1을 눌렀을 때 
+        else if (Input.GetKeyDown(KeyCode.Alpha1)) //고생했어
         {
             activedLogoNum = 1;
             StartCoroutine(ActivateLogo());
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2)) //숫자 2을 눌렀을 때
+        else if (Input.GetKeyDown(KeyCode.Alpha2)) //말씀
         {
             activedLogoNum = 2;
             StartCoroutine(ActivateLogo());
@@ -57,7 +71,7 @@ public class LogoTextManager : MonoBehaviour
             ColorNum = 3;
             ChangeVFXColor();
         }
-        else if (Input.GetKeyDown(KeyCode.T)) //24
+        else if (Input.GetKeyDown(KeyCode.T)) //Default
         {
             ColorNum = 4;
             ChangeVFXColor();
@@ -68,12 +82,17 @@ public class LogoTextManager : MonoBehaviour
 
     IEnumerator ActivateLogo()
     {
-        DeActivateOtherVFX();
-        yield return new WaitForSeconds(3f); // 2초간 대기
-        ActivateSpecificLogo();
+        if (isActivateLogo == false)
+        {
+            SoundManager.instance.PlaySFX("ActiveLogo");
+            DeActivateOtherVFX();
+            yield return new WaitForSeconds(3f); // 3초간 대기
+            ActivateSpecificLogo();
+            isActivateLogo = true;
+        }
     }
 
-    private void DeActivateOtherVFX()
+    private void DeActivateOtherVFX() 
     {
         for (int i = 0; i < visualEffects.Count; i++)
         {
@@ -94,28 +113,59 @@ public class LogoTextManager : MonoBehaviour
     }
 
 
-    private void ActivateAllVFX()
-    {
-        DeActivateSpecificLogo();
+    private void ActivateAllVFX() 
+    { 
         for (int i = 0; i < visualEffects.Count; i++)
         {
+            visualEffects[i].SetFloat("AnimationValue", 0);
             visualEffects[i].SetInt("LifeTimeBool", 0);
         }
+        isActivateLogo = false; 
     }
 
-    private void DestroySphereToRadius()  //가두고 있는 구체를 제거하는 코드
+    private void DeActivateAllVFX()
     {
         for (int i = 0; i < visualEffects.Count; i++)
         {
-            visualEffects[i].SetFloat("Radius", 1);
+            visualEffects[i].SetInt("LifeTimeBool", 1);
         }
     }
 
-    private void ChangeVFXColor()
+    IEnumerator DestroySphereToRadius()  //가두고 있는 구체를 제거하는 코드
+    {
+        if(ColorNum != 4)
+        { 
+            SoundManager.instance.PlaySFX("BreakSphere");
+            for (int i = 0; i < visualEffects.Count; i++)
+            {
+                visualEffects[i].SetFloat("Radius", 1);
+            }
+            yield return new WaitForSeconds(3f);
+            DeActivateAllVFX();
+            textOfStudentID[ColorNum].SetActive(true);  //학번에 맞게 Text를 띄워주고 일정 시간 후에 지워줌
+            yield return new WaitForSeconds(4f);
+            textOfStudentID[ColorNum].GetComponent<VisualEffect>().SetFloat("AnimationValue", 1);
+            yield return new WaitForSeconds(7.5f);
+            textOfStudentID[ColorNum].GetComponent<VisualEffect>().SetFloat("AnimationValue", 0);
+            ActivateAllVFX();
+            yield return new WaitForSeconds(3f);
+            textOfStudentID[ColorNum].SetActive(false);
+        }
+    }
+
+    private void ChangeVFXColor() //학번에 맞게 색 바꾸는 함수
     {
         for (int i = 0; i < visualEffects.Count; i++)
         {
             visualEffects[i].SetInt("TextureColorNum", ColorNum); 
         }
+
+        ChangeBGMwithColor();
+    }
+
+    private void ChangeBGMwithColor() //학번에 맞게 BGM 바꾸는 함수
+    {
+        int bgmName = ColorNum + 17;
+        SoundManager.instance.PlayBGM(bgmName.ToString());
     }
 }

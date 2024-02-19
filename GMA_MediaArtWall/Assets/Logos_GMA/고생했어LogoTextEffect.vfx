@@ -148,7 +148,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 4
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -646,7 +646,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614583}
   - {fileID: 8926484042661614585}
   dataType: 0
-  capacity: 200000
+  capacity: 100000
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
@@ -2155,7 +2155,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"6d54d7a820cd0a84db85815ef22ca055","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"1efe4084aac26004aaab2d039d6d1d17","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: texture
@@ -4324,7 +4324,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":0.4000000059604645,"y":5.0,"z":0.4000000059604645}'
+      m_SerializableObject: '{"x":0.4000000059604645,"y":3.0,"z":0.4000000059604645}'
     m_Space: 2147483647
   m_Property:
     name: Scale
@@ -9435,7 +9435,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"4896855f46c629c4592e7854f47fda0c","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"5e7d5d794f185da419f914bbf0e038ba","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: texture
@@ -9823,7 +9823,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 4
     m_Space: 2147483647
   m_Property:
     name: o
