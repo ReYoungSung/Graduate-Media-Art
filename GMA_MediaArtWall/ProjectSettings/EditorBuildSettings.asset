@@ -4,8 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
+<<<<<<< Updated upstream:GMA/ProjectSettings/EditorBuildSettings.asset
+  m_Scenes: []
+=======
   m_Scenes:
+  - enabled: 1
+    path: "Assets/01.\uB85C\uACE0 \uC774\uBBF8\uC9C0\uB97C \uD65C\uC6A9\uD55C \uC544\uD2B8\uC6CC\uD06C
+      (0705)_LOGO/01.\uB85C\uACE0 \uC774\uBBF8\uC9C0\uB97C \uD65C\uC6A9\uD55C \uC544\uD2B8\uC6CC\uD06C
+      01.unity"
+    guid: 7317ecd99bcd16141a0a8edc4fd65cb3
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scene2.unity
+    guid: 5346fb357778cce46b48d9288ddba2f2
+>>>>>>> Stashed changes:GMA_MediaArtWall/ProjectSettings/EditorBuildSettings.asset
   m_configObjects: {}

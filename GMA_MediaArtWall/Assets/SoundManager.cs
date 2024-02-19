@@ -110,6 +110,16 @@ public class SoundManager : MonoBehaviour
         sfxSource.PlayOneShot(sfxClips[sfxTitle], sfxVolume);
     }
 
+    public void StopSFX(string sfxTitle) {
+
+        if (!sfxClips.ContainsKey(sfxTitle))
+        {
+            Debug.LogError("Invalid SFX title");
+            return;
+        }
+
+        sfxSource.Stop();
+    }
     // BGM 정지 메서드
     public void StopBGM()
     {
