@@ -2155,7 +2155,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"678310914530e426483af68731cb835a","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"6d54d7a820cd0a84db85815ef22ca055","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: texture
@@ -7650,7 +7650,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"79d66a12bcc84491999534f4cb098d61","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"7430a3c5f5c3ce24a89deac7aa610d6e","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: texture
@@ -8017,7 +8017,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"63dfe2c0700214e2f8afc150f0c41397","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"e33dfb469cd167d4bb7f6beecd362a5b","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: texture
@@ -9068,7 +9068,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"d95029d00e9834115a8ebdfbf583a1d7","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"d6af7c2a6ca4596428b7b0f2bf898776","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: texture
@@ -9435,7 +9435,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"b861bba1121694e1d9538ee75317d4d7","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"4896855f46c629c4592e7854f47fda0c","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: texture

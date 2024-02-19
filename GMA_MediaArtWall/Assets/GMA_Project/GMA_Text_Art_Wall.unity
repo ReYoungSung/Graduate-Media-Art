@@ -240,6 +240,54 @@ Transform:
   m_Father: {fileID: 1823688467}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &783795422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 783795424}
+  - component: {fileID: 783795423}
+  m_Layer: 0
+  m_Name: LogoTextManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &783795423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783795422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f6b3eaf1667214e826f26307c18d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualEffects:
+  - {fileID: 1206049224}
+  - {fileID: 1887157681}
+  - {fileID: 876625978}
+--- !u!4 &783795424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783795422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.319935, y: -2.2898173, z: 6.2190657}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &876625975
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +372,7 @@ VisualEffect:
       - m_Value: 0
         m_Name: AnimationValue
         m_Overridden: 1
-      - m_Value: 1
+      - m_Value: 0.2
         m_Name: Radius
         m_Overridden: 1
     m_Vector2f:
@@ -626,7 +674,7 @@ VisualEffect:
       - m_Value: 0
         m_Name: AnimationValue
         m_Overridden: 1
-      - m_Value: 1
+      - m_Value: 0.2
         m_Name: Radius
         m_Overridden: 1
     m_Vector2f:
@@ -644,7 +692,7 @@ VisualEffect:
       m_Array:
       - m_Value: 1
         m_Name: TextureColorNum
-        m_Overridden: 0
+        m_Overridden: 1
       - m_Value: 0
         m_Name: LifeTimeBool
         m_Overridden: 1
@@ -1218,7 +1266,7 @@ VisualEffect:
       - m_Value: 0
         m_Name: AnimationValue
         m_Overridden: 1
-      - m_Value: 1
+      - m_Value: 0.2
         m_Name: Radius
         m_Overridden: 1
     m_Vector2f:
