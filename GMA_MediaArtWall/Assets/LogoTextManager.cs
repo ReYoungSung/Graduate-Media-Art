@@ -114,7 +114,8 @@ public class LogoTextManager : MonoBehaviour
 
 
     private void ActivateAllVFX() 
-    { 
+    {
+        SoundManager.instance.PlaySFX("DeActiveLogo");
         for (int i = 0; i < visualEffects.Count; i++)
         {
             visualEffects[i].SetFloat("AnimationValue", 0);
@@ -144,6 +145,7 @@ public class LogoTextManager : MonoBehaviour
             DeActivateAllVFX();
             textOfStudentID[ColorNum].SetActive(true);  //학번에 맞게 Text를 띄워주고 일정 시간 후에 지워줌
             yield return new WaitForSeconds(4f);
+            SoundManager.instance.PlaySFX("ActiveLogo");
             textOfStudentID[ColorNum].GetComponent<VisualEffect>().SetFloat("AnimationValue", 1);
             yield return new WaitForSeconds(7.5f);
             textOfStudentID[ColorNum].GetComponent<VisualEffect>().SetFloat("AnimationValue", 0);
