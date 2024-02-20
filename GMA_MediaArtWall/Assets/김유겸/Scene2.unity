@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 694206653}
   - component: {fileID: 694206656}
   m_Layer: 0
-  m_Name: Style
+  m_Name: Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -463,12 +463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee895cb15b03a4e428b14b226bceb8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VE_Asset_0: {fileID: 8926484042661614526, guid: c9b9d2a6740232844b91482dd8f4d1ab,
-    type: 3}
-  VE_Asset_1: {fileID: 8926484042661614526, guid: cb808a61ce41944459bdd79a91d0f19f,
-    type: 3}
-  VE_Asset_2: {fileID: 8926484042661614526, guid: 5113121a5b9fef84681bc59018994439,
-    type: 3}
+  VE: {fileID: 694206654}
 --- !u!1 &1012641429
 GameObject:
   m_ObjectHideFlags: 0

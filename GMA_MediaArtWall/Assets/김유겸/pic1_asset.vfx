@@ -119,8 +119,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: ImageChanger
-    path: ImageChanger
+  - name: ImageNumber
+    path: ImageNumber
     tooltip: 
     sheetType: m_Int
     realType: Int32
@@ -8021,7 +8021,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661616547}
-  m_ExposedName: ImageChanger
+  m_ExposedName: ImageNumber
   m_Exposed: 1
   m_Order: 3
   m_Category: 
@@ -8042,7 +8042,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661616547}
       inputSlot: {fileID: 8926484042661616472}
-    position: {x: 230376, y: -60049}
+    position: {x: 230418, y: -60125}
     expandedSlots: []
     expanded: 1
 --- !u!114 &8926484042661616547

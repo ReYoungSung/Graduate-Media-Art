@@ -6,87 +6,62 @@ using UnityEngine.VFX;
 public class ImageChanger : MonoBehaviour
 { 
     [SerializeField]
-    VisualEffectAsset VE_Asset_0;
-    [SerializeField]
-    VisualEffectAsset VE_Asset_1;
-    [SerializeField]
-    VisualEffectAsset VE_Asset_2;
-
     VisualEffect VE;
-    VisualEffectAsset VE_Asset;
-    bool isRunning = false;
-    float runningTime = 0f;
+    string number="";
 
 
     void Start()
     {
-        VE=GetComponent<VisualEffect>();
-        VE_Asset = VE.visualEffectAsset;
+
     }
 
 
     void Update()
     {
-
-        
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            isRunning = true;
-            runningTime = 0f;
+            ChangeScreen("1");
         }
-        else
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            
+            ChangeScreen("2");
         }
-
-
-
-
-        if (Input.GetKeyDown(KeyCode.Alpha1) && VE_Asset_0 != VE.visualEffectAsset) //0누르면 변경
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            ChangeVE("1");
+            ChangeScreen("3");
         }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2) && VE_Asset_1 != VE.visualEffectAsset) //1누르면 변경
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            ChangeVE("2");
+            ChangeScreen("4");
         }
-
-        if (Input.GetKeyDown(KeyCode.Alpha3) && VE_Asset_2 != VE.visualEffectAsset) //2누르면 변경
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            ChangeVE("3");
+            ChangeScreen("5");
         }
     }
 
-    void ChangeVE()
+    void ChangeScreen(string number)
     {
-        VE.Stop();
-
-        VE.visualEffectAsset = VE_Asset;
-
-        VE.Play();
-
-    }
-
-    void ChangeVE(string number)
-    {
-        if (number == "1")
+        if (number=="1")
         {
-            VE.visualEffectAsset = VE_Asset_0;
+            VE.SetInt("ImageNumber", 0);
         }
-
-        else if (number == "2")
+        else if (number=="2")
         {
-            VE.visualEffectAsset = VE_Asset_1;
+            VE.SetInt("ImageNumber", 1);
         }
-
         else if (number == "3")
         {
-            VE.visualEffectAsset = VE_Asset_2;
+            VE.SetInt("ImageNumber", 2);
         }
-
-
-
+        else if (number == "4")
+        {
+            VE.SetInt("ImageNumber", 3);
+        }
+        else if (number == "5")
+        {
+            VE.SetInt("ImageNumber", 4);
+        }
     }
+
 }
