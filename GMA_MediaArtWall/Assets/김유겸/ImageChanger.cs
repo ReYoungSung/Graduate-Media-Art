@@ -4,15 +4,18 @@ using UnityEngine;
 using UnityEngine.VFX;
 
 public class ImageChanger : MonoBehaviour
-{ 
+{
     [SerializeField]
     VisualEffect VE;
-    string number="";
 
+    string number = "";
+    int count = 0;
+    Vector3 vec1 = new Vector3(-13, 0, -20);
+    Vector3 vec2 = new Vector3(12.5f, 0, -20);
 
     void Start()
     {
-
+        VE.SetVector3("ScreenBreaker", vec1);
     }
 
 
@@ -38,15 +41,20 @@ public class ImageChanger : MonoBehaviour
         {
             ChangeScreen("5");
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ScreenBreak();
+        }
     }
 
     void ChangeScreen(string number)
     {
-        if (number=="1")
+        if (number == "1")
         {
             VE.SetInt("ImageNumber", 0);
         }
-        else if (number=="2")
+        else if (number == "2")
         {
             VE.SetInt("ImageNumber", 1);
         }
@@ -64,4 +72,18 @@ public class ImageChanger : MonoBehaviour
         }
     }
 
+    void ScreenBreak()
+    {
+        VE.SetInt("SBSize", 20);
+        if (count == 0)
+        {
+            VE.SetInt("SBSize", 50);
+            count++;
+        }
+        else if (count == 1)
+        {
+            VE.SetVector3("ScreenBreaker", vec2);
+            VE.SetInt("SBSize", 50);
+        }
+    }
 }
