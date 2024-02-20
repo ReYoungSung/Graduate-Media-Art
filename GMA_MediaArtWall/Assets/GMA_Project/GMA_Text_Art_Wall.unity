@@ -484,7 +484,7 @@ VisualEffect:
       - m_Value: 0
         m_Name: AnimationValue
         m_Overridden: 1
-      - m_Value: 0.2
+      - m_Value: 0.1
         m_Name: Radius
         m_Overridden: 1
     m_Vector2f:
@@ -783,7 +783,7 @@ VisualEffect:
       - m_Value: 1
         m_Name: Height
         m_Overridden: 1
-      - m_Value: 0
+      - m_Value: 1
         m_Name: AnimationValue
         m_Overridden: 1
       - m_Value: 1
@@ -961,7 +961,7 @@ VisualEffect:
       - m_Value: 0
         m_Name: AnimationValue
         m_Overridden: 1
-      - m_Value: 0.2
+      - m_Value: 0.1
         m_Name: Radius
         m_Overridden: 1
     m_Vector2f:
@@ -1728,7 +1728,7 @@ VisualEffect:
       - m_Value: 0
         m_Name: AnimationValue
         m_Overridden: 1
-      - m_Value: 0.2
+      - m_Value: 0.1
         m_Name: Radius
         m_Overridden: 1
     m_Vector2f:
@@ -1812,7 +1812,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887157678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2062,7 +2062,7 @@ VisualEffect:
       - m_Value: 1
         m_Name: Height
         m_Overridden: 1
-      - m_Value: 0
+      - m_Value: 1
         m_Name: AnimationValue
         m_Overridden: 1
       - m_Value: 1
