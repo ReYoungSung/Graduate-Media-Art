@@ -2223,25 +2223,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3828752952012951549, guid: efea4477cca09704ea26de6c20eed578,
-        type: 3}
-      propertyPath: sfxList.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3828752952012951549, guid: efea4477cca09704ea26de6c20eed578,
-        type: 3}
-      propertyPath: sfxList.Array.data[2].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: a745bc00aa8846341b07fbb68de3b5e9, type: 3}
-    - target: {fileID: 3828752952012951549, guid: efea4477cca09704ea26de6c20eed578,
-        type: 3}
-      propertyPath: sfxList.Array.data[0].title
-      value: DeActiveLogo
-      objectReference: {fileID: 0}
-    - target: {fileID: 3828752952012951549, guid: efea4477cca09704ea26de6c20eed578,
-        type: 3}
-      propertyPath: sfxList.Array.data[2].title
-      value: BreakSphere
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efea4477cca09704ea26de6c20eed578, type: 3}

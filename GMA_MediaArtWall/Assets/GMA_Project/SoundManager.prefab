@@ -127,11 +127,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: d5af857ef23fad74eaf13782132dbb2c, type: 3}
     volume: 0
   sfxList:
-  - title: BreakSphere
+  - title: DeActiveLogo
     clip: {fileID: 8300000, guid: bf40e024936908b499e1167962dfff5d, type: 3}
     volume: 0
   - title: ActiveLogo
     clip: {fileID: 8300000, guid: ffd71ce2b8ba52d48bbc5250b4ca314d, type: 3}
+    volume: 0
+  - title: BreakSphere
+    clip: {fileID: 8300000, guid: a745bc00aa8846341b07fbb68de3b5e9, type: 3}
     volume: 0
   bgmVolume: 1
   sfxVolume: 1

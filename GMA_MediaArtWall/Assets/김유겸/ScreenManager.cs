@@ -118,6 +118,7 @@ public class ScreenManager : MonoBehaviour
 
     void screen1_move()
     {
+        //SoundManager.instance.PlaySFX();
         float Y = screen1.transform.position.y - speed * Time.deltaTime;
         screen1.transform.position = new Vector3(screen1.transform.position.x, Y, screen1.transform.position.z);
 
