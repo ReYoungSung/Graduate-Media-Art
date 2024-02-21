@@ -1,20 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
-    bool trigger = false; //아직 어떤것 넣을지 안정함  Can't choose trigger yet. Add later.
-    // Start is called before the first frame update
-    void Start()
-    {
+    bool trigger = false;
 
-    }
+
 
     // Update is called once per frame
     void Update()
     {
+
         if (trigger)
         {
             ChangeScene();

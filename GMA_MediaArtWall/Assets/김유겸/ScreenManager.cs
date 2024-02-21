@@ -25,13 +25,16 @@ public class ScreenManager : MonoBehaviour
     int soundCount = 0;
     private float deltabox1X;
     private float deltabox1Z;
-    float distance1=0, distance2=0, distance3=0;
+    float distance1=0, distance2=0, distance3= 0;
     bool StartCameraMoving = false;
+
+
     void Start()
     {
         isMoving = true;
 
     }
+
     void Update()
     {
         if (isMoving)
@@ -62,7 +65,6 @@ public class ScreenManager : MonoBehaviour
 
         if (!(isMoving))
         {
-
             distance1 = Vector3.Distance(spot1.position, box1.position);
             distance2 = Vector3.Distance(spot2.position, box1.position);
             distance3 = Vector3.Distance(spot3.position, box1.position);

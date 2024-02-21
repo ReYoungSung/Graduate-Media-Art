@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/GMA_Project/GMA_BLock_Art_Wall.unity
+    guid: 5346fb357778cce46b48d9288ddba2f2
+  - enabled: 1
+    path: Assets/GMA_Project/GMA_Text_Art_Wall.unity
+    guid: 40016d0e6e0f1d941945ffe7d9c6ed14
   m_configObjects: {}

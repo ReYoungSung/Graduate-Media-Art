@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.VFX;
 using System.Collections.Generic;
 using System.Collections;
+using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class LogoTextManager : MonoBehaviour
 {
@@ -13,6 +15,12 @@ public class LogoTextManager : MonoBehaviour
     private int ColorNum = 4;
 
     private bool isActivateLogo = false;
+
+    [SerializeField] private Transform busBox;
+    [SerializeField] private Transform sartPoint;
+    [SerializeField] private Transform magicWand;
+    float distance1 = 0, distance2 = 0, distance3 = 0;
+    private bool isLoadNextScene = false;
 
     private void Start()
     {
@@ -26,6 +34,12 @@ public class LogoTextManager : MonoBehaviour
 
     void Update()
     {
+        distance1 = Vector3.Distance(sartPoint.position, busBox.position);
+        if (distance1 < 1 && !isLoadNextScene)
+        {
+            StartCoroutine(ChangeScene());
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             DestroySphereToRadius();
@@ -178,4 +192,15 @@ public class LogoTextManager : MonoBehaviour
         int bgmName = ColorNum + 17;
         SoundManager.instance.PlayBGM(bgmName.ToString());
     }
+
+    IEnumerator ChangeScene()
+    {
+        isLoadNextScene = true;
+        DeActivateAllVFX();
+        yield return new WaitForSeconds(1f);
+        SoundManager.instance.PlaySFX("BusStart");
+        SoundManager.instance.StopBGM();
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("GMA_BLock_Art_Wall");
+    } 
 }
