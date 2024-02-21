@@ -73,10 +73,10 @@ public class ScreenManager : MonoBehaviour
             {
                 if (distance1 >= 0.1)
                 {
-                    VE1.SetFloat("SBSize1", 120 - (distance1 * 80));
-                    if ((0.6 < distance1 && distance1 < 0.7 && soundCount == 0) ||
-                        (0.4 < distance1 && distance1 < 0.5 && soundCount == 1) ||
-                        (0.2 < distance1 && distance1 < 0.3 && soundCount == 2))
+                    VE1.SetFloat("SBSize1", 120 - (distance1 * 160));
+                    if ((1 < distance1 && distance1 < 1.1 && soundCount == 0) ||
+                        (0.7 < distance1 && distance1 < 0.8 && soundCount == 1) ||
+                        (0.4 < distance1 && distance1 < 0.5 && soundCount == 2))
                     {
                         SoundManager.instance.PlaySFX("WallBreak");
                         SoundManager.instance.SetSFXVolume(50);
@@ -216,5 +216,7 @@ public class ScreenManager : MonoBehaviour
         }
     }
 
-
+//    -1.263473
+//0.4433875
+//1.351178
 }
