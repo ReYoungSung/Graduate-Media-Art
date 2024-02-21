@@ -126,6 +126,12 @@ MonoBehaviour:
   - title: 20
     clip: {fileID: 8300000, guid: d5af857ef23fad74eaf13782132dbb2c, type: 3}
     volume: 0
+  - title: 21
+    clip: {fileID: 8300000, guid: 6644c7a98f2779d46a3c14c632415c54, type: 3}
+    volume: 0
+  - title: 22
+    clip: {fileID: 8300000, guid: 8f7588be44befec428dfa30cd136931d, type: 3}
+    volume: 0
   sfxList:
   - title: DeActiveLogo
     clip: {fileID: 8300000, guid: bf40e024936908b499e1167962dfff5d, type: 3}
@@ -135,6 +141,15 @@ MonoBehaviour:
     volume: 0
   - title: BreakSphere
     clip: {fileID: 8300000, guid: a745bc00aa8846341b07fbb68de3b5e9, type: 3}
+    volume: 0
+  - title: WallBreak
+    clip: {fileID: 8300000, guid: 8f7588be44befec428dfa30cd136931d, type: 3}
+    volume: 0
+  - title: BusSound
+    clip: {fileID: 8300000, guid: a9b3ec68698d0304787842ff1be2efae, type: 3}
+    volume: 0
+  - title: BusStop
+    clip: {fileID: 8300000, guid: 70e7d430ae89b134b98a6d3feeaa8fa6, type: 3}
     volume: 0
   bgmVolume: 1
   sfxVolume: 1
