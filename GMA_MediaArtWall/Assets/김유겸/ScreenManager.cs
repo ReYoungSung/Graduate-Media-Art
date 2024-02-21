@@ -25,7 +25,7 @@ public class ScreenManager : MonoBehaviour
     int soundCount = 0;
     private float deltabox1X;
     private float deltabox1Z;
-    float distance1=0, distance2=0, distance3= 0;
+    float distance1 = 0, distance2 = 0, distance3 = 0;
     bool StartCameraMoving = false;
 
 
@@ -58,7 +58,7 @@ public class ScreenManager : MonoBehaviour
         }
 
 
-        if(StartCameraMoving)
+        if (StartCameraMoving)
         {
             AllScreenForward();
         }
@@ -74,15 +74,15 @@ public class ScreenManager : MonoBehaviour
                 if (distance1 >= 0.1)
                 {
                     VE1.SetFloat("SBSize1", 120 - (distance1 * 80));
-                    if ((0.6 < distance1 && distance1 < 0.7 && soundCount==0) || 
-                        (0.4 < distance1 && distance1 < 0.5 && soundCount == 1) || 
+                    if ((0.6 < distance1 && distance1 < 0.7 && soundCount == 0) ||
+                        (0.4 < distance1 && distance1 < 0.5 && soundCount == 1) ||
                         (0.2 < distance1 && distance1 < 0.3 && soundCount == 2))
                     {
                         SoundManager.instance.PlaySFX("WallBreak");
                         SoundManager.instance.SetSFXVolume(50);
                         soundCount++;
                     }
-                 }
+                }
                 else
                 {
                     StartCameraMoving = true;
@@ -98,8 +98,8 @@ public class ScreenManager : MonoBehaviour
             {
                 if (distance2 >= 0.1)
                 {
-                    VE2.SetFloat("SBSize2", 80- distance2 * 60);
-                    if ((0.7 < distance2 && distance2 < 0.8 && soundCount == 0)|| (0.5 < distance2 && distance2 < 0.6 && soundCount == 1))
+                    VE2.SetFloat("SBSize2", 80 - distance2 * 60);
+                    if ((0.7 < distance2 && distance2 < 0.8 && soundCount == 0) || (0.5 < distance2 && distance2 < 0.6 && soundCount == 1))
                     {
                         SoundManager.instance.PlaySFX("WallBreak");
                         SoundManager.instance.SetSFXVolume(50);
@@ -120,7 +120,7 @@ public class ScreenManager : MonoBehaviour
             {
                 if (distance3 >= 0.1)
                 {
-                    VE2.SetFloat("SBSize3", 80- distance3 * 60);
+                    VE2.SetFloat("SBSize3", 80 - distance3 * 60);
                     if ((0.7 < distance3 && distance3 < 0.8 && soundCount == 0) || (0.5 < distance3 && distance3 < 0.6 && soundCount == 1))
                     {
                         SoundManager.instance.PlaySFX("WallBreak");
@@ -153,14 +153,14 @@ public class ScreenManager : MonoBehaviour
 
     void screen1_move()
     {
-        
+
         float Y = screen1.transform.position.y - speed * Time.deltaTime;
         screen1.transform.position = new Vector3(screen1.transform.position.x, Y, screen1.transform.position.z);
 
         if (screen1.transform.position.y <= 0)
         {
             isMoving = false;
-            SoundManager.instance.PlayBGM("21",true);
+            SoundManager.instance.PlayBGM("21", true);
             SoundManager.instance.SetBGMVolume(1);
             SoundManager.instance.PlaySFX("BusSound");
         }
@@ -187,7 +187,7 @@ public class ScreenManager : MonoBehaviour
     IEnumerator FallDown()
     {
         SoundManager.instance.StopBGM();
-        
+
         yield return new WaitForSeconds(3f);
         SoundManager.instance.StopBGM();
         SoundManager.instance.PlaySFX("CurtainCall");
@@ -197,18 +197,18 @@ public class ScreenManager : MonoBehaviour
         screen2.SetActive(false);
         yield return new WaitForSeconds(1f);
         VE3.SetFloat("Gravity", 0);
-        
+
     }
 
-   void AllScreenForward()
+    void AllScreenForward()
     {
         screen2.SetActive(true);
-        float screen1_Z = screen1.transform.position.z - speed * Time.deltaTime * 2;
+        float screen1_Z = screen1.transform.position.z - speed * Time.deltaTime * 3;
         screen1.transform.position = new Vector3(screen1.transform.position.x, screen1.transform.position.y, screen1_Z);
 
         float screen2_Z = screen2.transform.position.z - speed * Time.deltaTime * 20;
         screen2.transform.position = new Vector3(screen2.transform.position.x, screen2.transform.position.y, screen2_Z);
-        
+
         if (screen2_Z <= 4)
         {
             images.SetActive(true);
@@ -216,6 +216,5 @@ public class ScreenManager : MonoBehaviour
         }
     }
 
-    
-}
 
+}
