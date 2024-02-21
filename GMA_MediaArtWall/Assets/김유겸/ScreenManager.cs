@@ -71,17 +71,12 @@ public class ScreenManager : MonoBehaviour
 
             if (count == 0)
             {
-                if (distance1 >= 1)
+                if (distance1 >= 0.1)
                 {
-                    VE1.SetFloat("SBSize1", 120 - (distance1 * 3));
-                    if ((20 < distance1 && distance1 < 21 && soundCount==0) || 
-                        (17 < distance1 && distance1 < 18 && soundCount == 1) || 
-                        (14 < distance1 && distance1 < 15 && soundCount == 2) || 
-                        (11 < distance1 && distance1 < 12 && soundCount == 3) ||
-                        (8 < distance1 && distance1 < 9 && soundCount == 4) ||
-                        (5 < distance1 && distance1 < 6 && soundCount == 5) ||
-                        (2 < distance1 && distance1 < 3 && soundCount == 6)
-                        )
+                    VE1.SetFloat("SBSize1", 120 - (distance1 * 80));
+                    if ((0.6 < distance1 && distance1 < 0.7 && soundCount==0) || 
+                        (0.4 < distance1 && distance1 < 0.5 && soundCount == 1) || 
+                        (0.2 < distance1 && distance1 < 0.3 && soundCount == 2))
                     {
                         SoundManager.instance.PlaySFX("WallBreak");
                         SoundManager.instance.SetSFXVolume(50);
@@ -101,10 +96,10 @@ public class ScreenManager : MonoBehaviour
 
             else if (count == 1)
             {
-                if (distance2 >= 1)
+                if (distance2 >= 0.1)
                 {
-                    VE2.SetFloat("SBSize2", 80- distance2 * 3);
-                    if ((14 < distance2 && distance2 < 15 && soundCount == 0)|| (12 < distance2 && distance2 < 13 && soundCount == 1))
+                    VE2.SetFloat("SBSize2", 80- distance2 * 60);
+                    if ((0.7 < distance2 && distance2 < 0.8 && soundCount == 0)|| (0.5 < distance2 && distance2 < 0.6 && soundCount == 1))
                     {
                         SoundManager.instance.PlaySFX("WallBreak");
                         SoundManager.instance.SetSFXVolume(50);
@@ -123,10 +118,10 @@ public class ScreenManager : MonoBehaviour
 
             else if (count == 2)
             {
-                if (distance3 >= 1)
+                if (distance3 >= 0.1)
                 {
-                    VE2.SetFloat("SBSize3", 80- distance3 * 3);
-                    if ((14 < distance3 && distance3 < 15 && soundCount == 0) || (12 < distance3 && distance3 < 13 && soundCount == 1))
+                    VE2.SetFloat("SBSize3", 80- distance3 * 60);
+                    if ((0.7 < distance3 && distance3 < 0.8 && soundCount == 0) || (0.5 < distance3 && distance3 < 0.6 && soundCount == 1))
                     {
                         SoundManager.instance.PlaySFX("WallBreak");
                         SoundManager.instance.SetSFXVolume(50);
@@ -144,7 +139,7 @@ public class ScreenManager : MonoBehaviour
 
             else if (count == 3)
             {
-                if (distance1 <= 1)
+                if (distance1 <= 0.1)
                 {
                     count++;
                     SoundManager.instance.StopSFX("BusSound");
@@ -214,7 +209,7 @@ public class ScreenManager : MonoBehaviour
         float screen2_Z = screen2.transform.position.z - speed * Time.deltaTime * 20;
         screen2.transform.position = new Vector3(screen2.transform.position.x, screen2.transform.position.y, screen2_Z);
         
-        if (screen2_Z <= -1)
+        if (screen2_Z <= 4)
         {
             images.SetActive(true);
             StartCameraMoving = false;
