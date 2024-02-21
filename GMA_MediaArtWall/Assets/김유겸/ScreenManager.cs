@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class ScreenManager : MonoBehaviour
 {
     float speed = 4f;
-    bool isMoving = false;
+    bool isMoving = true;
+    bool isStart = false;
     [SerializeField] private GameObject screen1;
     [SerializeField] private GameObject screen2;
     [SerializeField] private GameObject screen3;
@@ -29,18 +32,18 @@ public class ScreenManager : MonoBehaviour
     float distance1 = 0, distance2 = 0, distance3 = 0;
     bool StartCameraMoving = false;
 
-
     void Start()
     {
-        isMoving = true;
-        SoundManager.instance.SetBGMVolume(0.5f);
+        screen1_move();
+        SoundManager.instance.SetBGMVolume(0.3f);
     }
 
     void Update()
     {
         if (isMoving)
         {
-            screen1_move();
+            StartCoroutine(StartBGM());
+            isMoving = false;
         }
 
 
@@ -64,7 +67,7 @@ public class ScreenManager : MonoBehaviour
             AllScreenForward();
         }
 
-        if (!(isMoving))
+        if (isStart)
         {
             distance1 = Vector3.Distance(spot1.position, box1.position);
             distance2 = Vector3.Distance(spot2.position, box1.position);
@@ -145,12 +148,17 @@ public class ScreenManager : MonoBehaviour
                 {
                     Debug.Log("¿£µù");
                     count++;
+                    count++;
                     SoundManager.instance.StopSFX("BusSound");
                     StartCoroutine(FallDown());
 
                 }
             }
 
+        }
+        else
+        {
+            screen1_move();
         }
     }
 
@@ -164,9 +172,7 @@ public class ScreenManager : MonoBehaviour
 
         if (screen1.transform.position.y <= 0)
         {
-            isMoving = false;
-            SoundManager.instance.PlayBGM("21", true);
-            SoundManager.instance.PlaySFX("BusSound");
+            isStart = true;
         }
     }
 
@@ -188,6 +194,12 @@ public class ScreenManager : MonoBehaviour
         }
     }
 
+    IEnumerator StartBGM()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SoundManager.instance.PlayBGM("21", true);
+        SoundManager.instance.PlaySFX("BusSound");
+    }
 
     IEnumerator FallDown()
     {
@@ -200,6 +212,8 @@ public class ScreenManager : MonoBehaviour
         screen2.SetActive(false);
         yield return new WaitForSeconds(1f);
         VE3.SetFloat("Gravity", 0);
+        yield return new WaitForSeconds(2f);
+        ChangeScene();
 
     }
 
@@ -219,5 +233,8 @@ public class ScreenManager : MonoBehaviour
         }
     }
 
-
+    void ChangeScene()
+    {
+        SceneManager.LoadScene("GMA_Text_Art_Wall");
+    }
 }
