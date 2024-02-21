@@ -24,7 +24,8 @@ public class LogoTextManager : MonoBehaviour
 
     private void Start()
     {
-        if(ColorNum == 4)
+        SoundManager.instance.SetBGMVolume(1);
+        if (ColorNum == 4)
         {
             activedLogoNum = 0;
             ColorNum = 4;

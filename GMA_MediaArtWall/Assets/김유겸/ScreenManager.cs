@@ -20,6 +20,7 @@ public class ScreenManager : MonoBehaviour
     [SerializeField] private Transform spot2;
     [SerializeField] private Transform spot3;
 
+
     string number = "";
     int count = 0;
     int soundCount = 0;
@@ -32,7 +33,7 @@ public class ScreenManager : MonoBehaviour
     void Start()
     {
         isMoving = true;
-
+        SoundManager.instance.SetBGMVolume(0.5f);
     }
 
     void Update()
@@ -73,7 +74,7 @@ public class ScreenManager : MonoBehaviour
             {
                 if (distance1 >= 0.1)
                 {
-                    VE1.SetFloat("SBSize1", 120 - (distance1 * 160));
+                    VE1.SetFloat("SBSize1", 140 - (distance1 * 170));
                     if ((1 < distance1 && distance1 < 1.1 && soundCount == 0) ||
                         (0.7 < distance1 && distance1 < 0.8 && soundCount == 1) ||
                         (0.4 < distance1 && distance1 < 0.5 && soundCount == 2))
@@ -120,9 +121,10 @@ public class ScreenManager : MonoBehaviour
             {
                 if (distance3 >= 0.1)
                 {
-                    VE2.SetFloat("SBSize3", 80 - distance3 * 60);
+                    VE2.SetFloat("SBSize3", 80 - distance3 * 57);
                     if ((0.7 < distance3 && distance3 < 0.8 && soundCount == 0) || (0.5 < distance3 && distance3 < 0.6 && soundCount == 1))
                     {
+
                         SoundManager.instance.PlaySFX("WallBreak");
                         SoundManager.instance.SetSFXVolume(50);
                         soundCount++;
@@ -141,6 +143,7 @@ public class ScreenManager : MonoBehaviour
             {
                 if (distance1 <= 0.1)
                 {
+                    Debug.Log("¿£µù");
                     count++;
                     SoundManager.instance.StopSFX("BusSound");
                     StartCoroutine(FallDown());
@@ -150,6 +153,8 @@ public class ScreenManager : MonoBehaviour
 
         }
     }
+
+
 
     void screen1_move()
     {
@@ -161,7 +166,6 @@ public class ScreenManager : MonoBehaviour
         {
             isMoving = false;
             SoundManager.instance.PlayBGM("21", true);
-            SoundManager.instance.SetBGMVolume(1);
             SoundManager.instance.PlaySFX("BusSound");
         }
     }
@@ -184,10 +188,9 @@ public class ScreenManager : MonoBehaviour
         }
     }
 
+
     IEnumerator FallDown()
     {
-        SoundManager.instance.StopBGM();
-
         yield return new WaitForSeconds(3f);
         SoundManager.instance.StopBGM();
         SoundManager.instance.PlaySFX("CurtainCall");
@@ -216,7 +219,5 @@ public class ScreenManager : MonoBehaviour
         }
     }
 
-//    -1.263473
-//0.4433875
-//1.351178
+
 }
