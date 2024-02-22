@@ -24,8 +24,8 @@ public class SoundManager : MonoBehaviour
     private Dictionary<string, AudioClip> bgmClips = new Dictionary<string, AudioClip>();
     private Dictionary<string, AudioClip> sfxClips = new Dictionary<string, AudioClip>();
 
-    [HideInInspector] public float bgmVolume = 1f; // Variable to control overall BGM volume
-    [HideInInspector] public float sfxVolume = 1f; // Variable to control overall SFX volume
+    public float bgmVolume = 1f; // Variable to control overall BGM volume
+    public float sfxVolume = 1f; // Variable to control overall SFX volume
 
     private bool isBGMPlaying = false;
     private float pausedTime;
@@ -108,6 +108,17 @@ public class SoundManager : MonoBehaviour
         }
 
         sfxSource.PlayOneShot(sfxClips[sfxTitle], sfxVolume);
+    }
+
+    public void PlaySFX(string sfxTitle, float localSfxVolume)
+    {
+        if (!sfxClips.ContainsKey(sfxTitle))
+        {
+            Debug.LogError("Invalid SFX title");
+            return;
+        }
+
+        sfxSource.PlayOneShot(sfxClips[sfxTitle], localSfxVolume);
     }
 
     public void StopSFX(string sfxTitle)

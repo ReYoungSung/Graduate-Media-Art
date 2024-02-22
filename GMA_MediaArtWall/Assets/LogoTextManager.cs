@@ -7,14 +7,15 @@ using UnityEngine.SceneManagement;
 
 public class LogoTextManager : MonoBehaviour
 {
-    public List<VisualEffect> visualEffects = new List<VisualEffect>();
+    public List<VisualEffect> visualEffects = new List<VisualEffect>(); 
 
-    public List<GameObject> textOfStudentID = new List<GameObject>();
+    public List<GameObject> textOfStudentID = new List<GameObject>(); 
 
     private int activedLogoNum = 0; 
     private int ColorNum = 4;
 
     private bool isActivateLogo = false;
+    private bool isDestroyedLogo = false;
 
     [SerializeField] private Transform busBox;
     [SerializeField] private Transform sartPoint;
@@ -30,10 +31,10 @@ public class LogoTextManager : MonoBehaviour
             activedLogoNum = 0;
             ColorNum = 4;
         }
-        isActivateLogo = false;
+        isActivateLogo = false; 
     }
 
-    void Update()
+    void Update() 
     {
         distance1 = Vector3.Distance(sartPoint.position, busBox.position);
         if (distance1 < 1 && !isLoadNextScene)
@@ -45,8 +46,7 @@ public class LogoTextManager : MonoBehaviour
         {
             DestroySphereToRadius();
         }
-
-        if (Input.GetKeyDown(KeyCode.Alpha0)) //한동 로고일 때
+        else if (Input.GetKeyDown(KeyCode.Alpha0)) //한동 로고일 때
         {
             StartCoroutine(ActivateLogo(0));
         }
@@ -60,7 +60,7 @@ public class LogoTextManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
-            StartCoroutine(ActivateStudentIDLogo()); 
+            ResetArt();
         }
 
         if (Input.GetKeyDown(KeyCode.Q)) //17
@@ -85,7 +85,7 @@ public class LogoTextManager : MonoBehaviour
         }
     }
 
-    IEnumerator ActivateLogo(int num)
+    public IEnumerator ActivateLogo(int num)
     {
         if (isActivateLogo == false)
         {
@@ -103,7 +103,7 @@ public class LogoTextManager : MonoBehaviour
         }
     }
 
-    private void DeActivateOtherVFX() 
+    public void DeActivateOtherVFX() 
     {
         for (int i = 0; i < visualEffects.Count; i++)
         {
@@ -114,7 +114,7 @@ public class LogoTextManager : MonoBehaviour
         }
     }
 
-    private void ActivateAllVFX() 
+    public void ActivateAllVFX() 
     {
         SoundManager.instance.PlaySFX("DeActiveLogo");
         for (int i = 0; i < visualEffects.Count; i++)
@@ -125,7 +125,7 @@ public class LogoTextManager : MonoBehaviour
         isActivateLogo = false; 
     }
 
-    private void DeActivateAllVFX()
+    public void DeActivateAllVFX()
     {
         for (int i = 0; i < visualEffects.Count; i++)
         {
@@ -133,9 +133,9 @@ public class LogoTextManager : MonoBehaviour
         }
     }
 
-    private void DestroySphereToRadius()  //가두고 있는 구체를 제거하는 코드
+    public void DestroySphereToRadius()  //가두고 있는 구체를 제거하는 코드
     {
-        if(ColorNum != 4)
+        if(ColorNum != 4 && isDestroyedLogo == false)
         { 
             SoundManager.instance.PlaySFX("BreakSphere");
             for (int i = 0; i < visualEffects.Count; i++)
@@ -143,13 +143,15 @@ public class LogoTextManager : MonoBehaviour
                 visualEffects[i].SetFloat("Radius", 1);
             }
             
-            Invoke("ChangeBGM",2f); 
+            Invoke("ChangeBGM",2f);  
 
             StartCoroutine(ActivateStudentIDLogo());
+
+            isDestroyedLogo = true;
         }
     }
 
-    IEnumerator ActivateStudentIDLogo()
+    public IEnumerator ActivateStudentIDLogo()
     {
         if (isActivateLogo == false)
         {
@@ -176,7 +178,7 @@ public class LogoTextManager : MonoBehaviour
         }
     }
 
-    private void ChangeVFXColor(int num) //학번에 맞게 색 바꾸는 함수
+    public void ChangeVFXColor(int num) //학번에 맞게 색 바꾸는 함수
     {
         if(isActivateLogo == false)
         {
@@ -188,20 +190,52 @@ public class LogoTextManager : MonoBehaviour
         }
     }
 
-    private void ChangeBGM() //학번에 맞게 BGM 바꾸는 함수
+    public void ChangeBGM() //학번에 맞게 BGM 바꾸는 함수
     {
         int bgmName = ColorNum + 17;
         SoundManager.instance.PlayBGM(bgmName.ToString());
     }
 
-    IEnumerator ChangeScene()
+    public IEnumerator ChangeScene() 
     {
         isLoadNextScene = true;
         DeActivateAllVFX();
         yield return new WaitForSeconds(1f);
         SoundManager.instance.PlaySFX("BusStart");
         SoundManager.instance.StopBGM();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f); 
         SceneManager.LoadScene("GMA_BLock_Art_Wall");
     } 
-}
+
+    public void ResetArt() 
+    { 
+        if (isActivateLogo == false) 
+        {
+            isActivateLogo = true;
+            //구체 좁히기
+            for (int i = 0; i < visualEffects.Count; i++)
+            {
+                visualEffects[i].SetFloat("Radius", 0.1f); 
+            }
+
+            //학번 별 메세지 닫기 
+            for (int i = 0; i < textOfStudentID.Count; i++)
+            {
+                textOfStudentID[ColorNum].SetActive(false);
+            }
+
+            //아트 컴포넌트 리셋
+            for (int i = 0; i < visualEffects.Count; i++)
+            {
+                visualEffects[i].SetFloat("AnimationValue", 0);
+                visualEffects[i].SetInt("LifeTimeBool", 0);
+            }
+            isActivateLogo = false;
+
+            SoundManager.instance.StopBGM();
+            
+
+            isDestroyedLogo = false;
+        } 
+    } 
+} 
