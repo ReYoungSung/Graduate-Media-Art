@@ -914,7 +914,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621287606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.654, y: 1.7, z: -1.389}
+  m_LocalPosition: {x: 1.654, y: 2.1, z: -1.389}
   m_LocalScale: {x: 0.5, y: 0.1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2175,7 +2175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608074925}
   m_LocalRotation: {x: -0, y: -0.35739374, z: -0, w: 0.9339539}
-  m_LocalPosition: {x: -1.376812, y: 0, z: -0.06834087}
+  m_LocalPosition: {x: -1.5, y: 0, z: -0.3}
   m_LocalScale: {x: 0.3, y: 0.1, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2373,7 +2373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743978102}
   m_LocalRotation: {x: -0, y: -0.35739374, z: -0, w: 0.9339539}
-  m_LocalPosition: {x: -1.06, y: 0, z: 1.838}
+  m_LocalPosition: {x: -1.23, y: 0, z: 2.01}
   m_LocalScale: {x: 0.3, y: 0.1, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2859,7 +2859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854790855}
   m_LocalRotation: {x: 0.0003889192, y: -0.35666886, z: -0.00028530674, w: 0.9342308}
-  m_LocalPosition: {x: 0.35169032, y: 4.8309128e-11, z: 0.1}
+  m_LocalPosition: {x: 0.4, y: 4.8309128e-11, z: -0.15}
   m_LocalScale: {x: 0.3, y: 0.1, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3676,31 +3676,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SoundManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3828752952012951549, guid: efea4477cca09704ea26de6c20eed578,
-        type: 3}
-      propertyPath: sfxList.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3828752952012951549, guid: efea4477cca09704ea26de6c20eed578,
-        type: 3}
-      propertyPath: sfxList.Array.data[7].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 0f6337f3f23df944db28b9f5f60c4222, type: 3}
-    - target: {fileID: 3828752952012951549, guid: efea4477cca09704ea26de6c20eed578,
-        type: 3}
-      propertyPath: sfxList.Array.data[7].title
-      value: InteractionSFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 3828752952012951549, guid: efea4477cca09704ea26de6c20eed578,
-        type: 3}
-      propertyPath: sfxList.Array.data[6].volume
-      value: 0.525
-      objectReference: {fileID: 0}
-    - target: {fileID: 3828752952012951549, guid: efea4477cca09704ea26de6c20eed578,
-        type: 3}
-      propertyPath: sfxList.Array.data[7].volume
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efea4477cca09704ea26de6c20eed578, type: 3}

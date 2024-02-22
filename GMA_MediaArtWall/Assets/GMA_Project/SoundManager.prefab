@@ -153,6 +153,9 @@ MonoBehaviour:
     volume: 0
   - title: BusStart
     clip: {fileID: 8300000, guid: 2fbe49ee95462c8499152b882048a0d6, type: 3}
+    volume: 0.525
+  - title: InteractionSFX
+    clip: {fileID: 8300000, guid: 0f6337f3f23df944db28b9f5f60c4222, type: 3}
     volume: 1
   bgmVolume: 1
   sfxVolume: 1

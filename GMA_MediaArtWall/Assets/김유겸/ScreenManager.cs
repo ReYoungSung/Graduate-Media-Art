@@ -79,7 +79,7 @@ public class ScreenManager : MonoBehaviour
             {
                 if (distance1 >= 0.25)
                 {
-                    VE1.SetFloat("SBSize1", 140 - (distance1 * 170));
+                    VE1.SetFloat("SBSize1", 160 - (distance1 * 170));
                     if ((1 < distance1 && distance1 < 1.1 && soundCount == 0) ||
                         (0.7 < distance1 && distance1 < 0.8 && soundCount == 1) ||
                         (0.4 < distance1 && distance1 < 0.5 && soundCount == 2))
@@ -213,6 +213,7 @@ public class ScreenManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         images.SetActive(false);
         screen2.SetActive(false);
+        FinalSentence.SetActive(true);
         yield return new WaitForSeconds(1f);
         VE3.SetFloat("Gravity", 0);       
         yield return new WaitForSeconds(20f);
