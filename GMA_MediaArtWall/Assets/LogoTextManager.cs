@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class LogoTextManager : MonoBehaviour
 {
@@ -23,15 +24,29 @@ public class LogoTextManager : MonoBehaviour
     float distance1 = 0, distance2 = 0, distance3 = 0;
     private bool isLoadNextScene = false;
 
+
+
+    private int count2 = 0;
+    public Transform targetPosition1; // 이동할 목표 위치
+    public Transform targetPosition2; // 이동할 목표 위치
+    private Vector3 initialPosition; // 초기 카메라 위치
+    private Vector3 targetPositionInitial; // 이동할 목표 위치의 초기 위치
+    public GameObject mainCamera;
+
     private void Start()
     {
+        
+        ColorNum = SoundManager.instance.ColorNum;
+
         SoundManager.instance.SetBGMVolume(1);
+        SoundManager.instance.StopBGM();
         if (ColorNum == 4)
         {
             activedLogoNum = 0;
-            ColorNum = 4;
         }
-        isActivateLogo = false; 
+        isActivateLogo = false;
+
+        initialPosition = mainCamera.transform.localPosition; // 초기 카메라 위치 저장
     }
 
     void Update() 
@@ -79,16 +94,17 @@ public class LogoTextManager : MonoBehaviour
         {
             ChangeVFXColor(3);
         }
-        else if (Input.GetKeyDown(KeyCode.T)) //Default
+        else if (Input.GetKeyDown(KeyCode.C)) //CameraSwitch
         {
-            ChangeVFXColor(4);
+            MoveCamera();
         }
     }
 
     public IEnumerator ActivateLogo(int num)
     {
-        if (isActivateLogo == false)
+        if (isActivateLogo == false && isDestroyedLogo == true) 
         {
+            SoundManager.instance.PlaySFX("InteractionSFX", 0.4f);
             isActivateLogo = true;
             activedLogoNum = num;
             SoundManager.instance.PlaySFX("ActiveLogo");
@@ -100,6 +116,8 @@ public class LogoTextManager : MonoBehaviour
             visualEffects[activedLogoNum].SetInt("SpawnRate", 10000);
                         
             ActivateAllVFX();
+            yield return new WaitForSeconds(2f);
+            isActivateLogo = false;
         }
     }
 
@@ -122,7 +140,6 @@ public class LogoTextManager : MonoBehaviour
             visualEffects[i].SetFloat("AnimationValue", 0);
             visualEffects[i].SetInt("LifeTimeBool", 0);
         }
-        isActivateLogo = false; 
     }
 
     public void DeActivateAllVFX()
@@ -180,7 +197,8 @@ public class LogoTextManager : MonoBehaviour
 
     public void ChangeVFXColor(int num) //학번에 맞게 색 바꾸는 함수
     {
-        if(isActivateLogo == false)
+        SoundManager.instance.ColorNum = num;
+        if (isActivateLogo == false)
         {
             ColorNum = num;
             for (int i = 0; i < visualEffects.Count; i++)
@@ -193,24 +211,25 @@ public class LogoTextManager : MonoBehaviour
     public void ChangeBGM() //학번에 맞게 BGM 바꾸는 함수
     {
         int bgmName = ColorNum + 17;
-        SoundManager.instance.PlayBGM(bgmName.ToString());
+        SoundManager.instance.PlayBGM(bgmName.ToString()); 
     }
 
     public IEnumerator ChangeScene() 
     {
-        isLoadNextScene = true;
-        DeActivateAllVFX();
-        yield return new WaitForSeconds(1f);
-        SoundManager.instance.PlaySFX("BusStart");
-        SoundManager.instance.StopBGM();
-        yield return new WaitForSeconds(5f); 
-        SceneManager.LoadScene("GMA_BLock_Art_Wall");
+        isLoadNextScene = true; 
+        DeActivateAllVFX(); 
+        yield return new WaitForSeconds(1f); 
+        SoundManager.instance.PlaySFX("BusStart"); 
+        SoundManager.instance.StopBGM(); 
+        yield return new WaitForSeconds(5f);  
+        SceneManager.LoadScene("GMA_BLock_Art_Wall"); 
     } 
 
     public void ResetArt() 
     { 
         if (isActivateLogo == false) 
         {
+            SoundManager.instance.PlaySFX("InteractionSFX", 0.4f);
             isActivateLogo = true;
             //구체 좁히기
             for (int i = 0; i < visualEffects.Count; i++)
@@ -237,5 +256,22 @@ public class LogoTextManager : MonoBehaviour
 
             isDestroyedLogo = false;
         } 
-    } 
+    }
+
+    public void MoveCamera()
+    {
+        if ((count2 + 1) % 3 == 0)
+        {
+            mainCamera.transform.localPosition = initialPosition;
+        }
+        else if ((count2 + 1) % 3 == 1)
+        {
+            mainCamera.transform.localPosition = targetPosition1.localPosition;
+        }
+        else if ((count2 + 1) % 3 == 2)
+        {
+            mainCamera.transform.localPosition = targetPosition2.localPosition;
+        }
+        count2++;
+    }
 } 

@@ -646,7 +646,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614583}
   - {fileID: 8926484042661614585}
   dataType: 0
-  capacity: 100000
+  capacity: 20000
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
@@ -775,7 +775,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"6c7dcd8bc100b9a44ad20cc0f8645dcb","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"5d8cf5c9000cac5478cb8eef5355ba49","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: mainTexture
@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_OutputSlots:
   - {fileID: 8926484042661614618}
   - {fileID: 8926484042661614619}
-  Asset: {fileID: -3256353808211938606, guid: 7db89f98373ed694991eb4896be3ed25, type: 3}
+  Asset: {fileID: -3256353808211938606, guid: 1a485837b0f514646a1959675265451b, type: 3}
 --- !u!114 &8926484042661614618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1343,7 +1343,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":1022.5,"y":512.0}'
+      m_SerializableObject: '{"x":1022.5,"y":768.0}'
     m_Space: 2147483647
   m_Property:
     name: o
@@ -1905,7 +1905,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.AnimationCurve, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"frames":[{"time":0.0,"value":0.0,"inTangent":0.0,"outTangent":0.0,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":0.21253439784049989,"value":0.9925243258476257,"inTangent":0.029670417308807374,"outTangent":0.029670417308807374,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":0.8156130909919739,"value":0.9999999403953552,"inTangent":0.0,"outTangent":0.0,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":1.0,"value":0.0,"inTangent":0.0,"outTangent":0.0,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
+      m_SerializableObject: '{"frames":[{"time":0.0,"value":0.0,"inTangent":0.0,"outTangent":0.0,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":0.1783658266067505,"value":0.9925243258476257,"inTangent":0.029670417308807374,"outTangent":0.029670417308807374,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":0.8998955488204956,"value":0.9882075190544128,"inTangent":-0.3278581500053406,"outTangent":-0.3278581500053406,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":1.0,"value":0.0,"inTangent":0.0,"outTangent":0.0,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
     m_Space: 2147483647
   m_Property:
     name: Alpha
@@ -2727,7 +2727,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.2
+      m_SerializableObject: 0.1
     m_Space: 2147483647
   m_Property:
     name: b
@@ -4324,7 +4324,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":0.4000000059604645,"y":4.0,"z":0.4000000059604645}'
+      m_SerializableObject: '{"x":4.0,"y":4.0,"z":4.0}'
     m_Space: 2147483647
   m_Property:
     name: Scale
@@ -9435,7 +9435,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"5e7d5d794f185da419f914bbf0e038ba","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"45775468d4841fb448e52718d586c712","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: texture

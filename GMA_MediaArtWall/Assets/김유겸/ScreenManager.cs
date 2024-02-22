@@ -38,6 +38,7 @@ public class ScreenManager : MonoBehaviour
     {
         screen1_move();
         SoundManager.instance.SetBGMVolume(0.3f);
+        screen2.GetComponent<VisualEffect>().SetInt("ImageNumber", SoundManager.instance.ColorNum);
     }
 
     void Update()
@@ -104,7 +105,7 @@ public class ScreenManager : MonoBehaviour
             {
                 if (distance2 >= 0.25)
                 {
-                    VE2.SetFloat("SBSize2", 80 - distance2 * 60);
+                    VE2.SetFloat("SBSize2", 100 - distance2 * 60);
                     if ((0.7 < distance2 && distance2 < 0.8 && soundCount == 0) || (0.5 < distance2 && distance2 < 0.6 && soundCount == 1))
                     {
                         SoundManager.instance.PlaySFX("WallBreak");
@@ -126,7 +127,7 @@ public class ScreenManager : MonoBehaviour
             {
                 if (distance3 >= 0.25)
                 {
-                    VE2.SetFloat("SBSize3", 80 - distance3 * 57);
+                    VE2.SetFloat("SBSize3", 100 - distance3 * 57);
                     if ((0.7 < distance3 && distance3 < 0.8 && soundCount == 0) || (0.5 < distance3 && distance3 < 0.6 && soundCount == 1))
                     {
 
@@ -214,9 +215,10 @@ public class ScreenManager : MonoBehaviour
         images.SetActive(false);
         screen2.SetActive(false);
         FinalSentence.SetActive(true);
+        SoundManager.instance.PlayBGM("HGULOGOSONG");
         yield return new WaitForSeconds(1f);
-        VE3.SetFloat("Gravity", 0);       
-        yield return new WaitForSeconds(20f);
+        VE3.SetFloat("Gravity", 0);
+        yield return new WaitForSeconds(115f);
         FinalSentence.SetActive(false);
         ChangeScene();
     }
@@ -240,5 +242,6 @@ public class ScreenManager : MonoBehaviour
     void ChangeScene()
     {
         SceneManager.LoadScene("GMA_Text_Art_Wall");
+
     }
 }

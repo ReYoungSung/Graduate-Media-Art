@@ -30,6 +30,8 @@ public class SoundManager : MonoBehaviour
     private bool isBGMPlaying = false;
     private float pausedTime;
 
+    public int ColorNum = 4;
+
     private void Awake()
     {
         if (instance == null)

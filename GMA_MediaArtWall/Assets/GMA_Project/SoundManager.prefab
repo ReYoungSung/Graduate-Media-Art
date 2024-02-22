@@ -132,6 +132,12 @@ MonoBehaviour:
   - title: 22
     clip: {fileID: 8300000, guid: 8f7588be44befec428dfa30cd136931d, type: 3}
     volume: 0
+  - title: 23
+    clip: {fileID: 8300000, guid: 8f7588be44befec428dfa30cd136931d, type: 3}
+    volume: 0
+  - title: HGULOGOSONG
+    clip: {fileID: 8300000, guid: 5694754dd92e7254f9d1766ddbd07574, type: 3}
+    volume: 0.094
   sfxList:
   - title: DeActiveLogo
     clip: {fileID: 8300000, guid: bf40e024936908b499e1167962dfff5d, type: 3}
@@ -159,3 +165,4 @@ MonoBehaviour:
     volume: 1
   bgmVolume: 1
   sfxVolume: 1
+  ColorNum: 4
