@@ -2926,7 +2926,7 @@ GameObject:
   - component: {fileID: 1887157681}
   - component: {fileID: 1887157680}
   m_Layer: 0
-  m_Name: "\uACE0\uC0DD\uD588\uC5B4LogoTextEffect"
+  m_Name: "\uACE0\uC0DD\uB9CE\uC558\uC5B4LogoTextEffect"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
