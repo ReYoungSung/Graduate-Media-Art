@@ -32,6 +32,8 @@ public class ScreenManager : MonoBehaviour
     float distance1 = 0, distance2 = 0, distance3 = 0;
     bool StartCameraMoving = false;
 
+    [SerializeField] GameObject FinalSentence;
+
     void Start()
     {
         screen1_move();
@@ -75,7 +77,7 @@ public class ScreenManager : MonoBehaviour
 
             if (count == 0)
             {
-                if (distance1 >= 0.1)
+                if (distance1 >= 0.25)
                 {
                     VE1.SetFloat("SBSize1", 140 - (distance1 * 170));
                     if ((1 < distance1 && distance1 < 1.1 && soundCount == 0) ||
@@ -100,7 +102,7 @@ public class ScreenManager : MonoBehaviour
 
             else if (count == 1)
             {
-                if (distance2 >= 0.1)
+                if (distance2 >= 0.25)
                 {
                     VE2.SetFloat("SBSize2", 80 - distance2 * 60);
                     if ((0.7 < distance2 && distance2 < 0.8 && soundCount == 0) || (0.5 < distance2 && distance2 < 0.6 && soundCount == 1))
@@ -122,7 +124,7 @@ public class ScreenManager : MonoBehaviour
 
             else if (count == 2)
             {
-                if (distance3 >= 0.1)
+                if (distance3 >= 0.25)
                 {
                     VE2.SetFloat("SBSize3", 80 - distance3 * 57);
                     if ((0.7 < distance3 && distance3 < 0.8 && soundCount == 0) || (0.5 < distance3 && distance3 < 0.6 && soundCount == 1))
@@ -144,13 +146,14 @@ public class ScreenManager : MonoBehaviour
 
             else if (count == 3)
             {
-                if (distance1 <= 0.1)
+                if (distance1 <= 0.25)
                 {
                     Debug.Log("¿£µù");
                     count++;
-                    count++;
                     SoundManager.instance.StopSFX("BusSound");
+                    SoundManager.instance.PlaySFX("BusStop"); 
                     StartCoroutine(FallDown());
+
 
                 }
             }
@@ -211,10 +214,10 @@ public class ScreenManager : MonoBehaviour
         images.SetActive(false);
         screen2.SetActive(false);
         yield return new WaitForSeconds(1f);
-        VE3.SetFloat("Gravity", 0);
-        yield return new WaitForSeconds(2f);
+        VE3.SetFloat("Gravity", 0);       
+        yield return new WaitForSeconds(20f);
+        FinalSentence.SetActive(false);
         ChangeScene();
-
     }
 
     void AllScreenForward()
