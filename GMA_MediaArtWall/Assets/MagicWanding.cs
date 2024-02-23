@@ -14,7 +14,6 @@ public class MagicWanding : MonoBehaviour
     {
         if (!coolingDown)
         {
-            coolingDown = true;
             if (other.CompareTag("StartPoint"))
             {
                 StartPointFunction();
@@ -88,7 +87,8 @@ public class MagicWanding : MonoBehaviour
 
     IEnumerator StartCooldown()
     {
-        yield return new WaitForSeconds(cooldownDuration);
+        coolingDown = true;
+        yield return new WaitForSecondsRealtime(cooldownDuration);
         coolingDown = false;
     }
 }
