@@ -215,6 +215,7 @@ public class ScreenManager : MonoBehaviour
         images.SetActive(false);
         screen2.SetActive(false);
         FinalSentence.SetActive(true);
+        SoundManager.instance.SetBGMVolume(1f);
         SoundManager.instance.PlayBGM("HGULOGOSONG");
         yield return new WaitForSeconds(1f);
         VE3.SetFloat("Gravity", 0);
@@ -241,6 +242,7 @@ public class ScreenManager : MonoBehaviour
 
     void ChangeScene()
     {
+        
         SceneManager.LoadScene("GMA_Text_Art_Wall");
 
     }
