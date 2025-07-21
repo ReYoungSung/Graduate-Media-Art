@@ -2276,6 +2276,7 @@ GameObject:
   - component: {fileID: 1608074928}
   - component: {fileID: 1608074927}
   - component: {fileID: 1608074926}
+  - component: {fileID: 1608074930}
   m_Layer: 3
   m_Name: B
   m_TagString: B
@@ -2362,6 +2363,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -41.88, z: 0}
+--- !u!114 &1608074930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608074925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77bc200897df4f4483b478b598b0c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StreamingClient: {fileID: 226472522}
+  RigidBodyId: 2
+  NetworkCompensation: 1
 --- !u!1 &1664559218
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,6 +2490,7 @@ GameObject:
   - component: {fileID: 1743978105}
   - component: {fileID: 1743978104}
   - component: {fileID: 1743978103}
+  - component: {fileID: 1743978107}
   m_Layer: 3
   m_Name: C
   m_TagString: C
@@ -2558,8 +2575,23 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -41.88, z: 0}
+--- !u!114 &1743978107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743978102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77bc200897df4f4483b478b598b0c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StreamingClient: {fileID: 226472522}
+  RigidBodyId: 3
+  NetworkCompensation: 1
 --- !u!1 &1823688464
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,7 +2670,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: -23.07}
+  m_LocalPosition: {x: 10, y: 0, z: -13.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2960,6 +2992,7 @@ GameObject:
   - component: {fileID: 1854790858}
   - component: {fileID: 1854790857}
   - component: {fileID: 1854790856}
+  - component: {fileID: 1854790860}
   m_Layer: 3
   m_Name: A
   m_TagString: A
@@ -3044,8 +3077,23 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0.03, y: -41.792, z: -0.046}
+--- !u!114 &1854790860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854790855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77bc200897df4f4483b478b598b0c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StreamingClient: {fileID: 226472522}
+  RigidBodyId: 1
+  NetworkCompensation: 1
 --- !u!1 &1887157678
 GameObject:
   m_ObjectHideFlags: 0
