@@ -21,8 +21,6 @@ public class LogoTextManager : MonoBehaviour
     [SerializeField] private Transform busBox;
     [SerializeField] private Transform sartPoint;
     [SerializeField] private Transform magicWand;
-    float distance1 = 0, distance2 = 0, distance3 = 0;
-    private bool isLoadNextScene = false;
 
 
 
@@ -51,12 +49,6 @@ public class LogoTextManager : MonoBehaviour
 
     void Update() 
     {
-        distance1 = Vector3.Distance(sartPoint.position, busBox.position);
-        if (distance1 < 1 && !isLoadNextScene)
-        {
-            StartCoroutine(ChangeScene());
-        }
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             DestroySphereToRadius();
@@ -219,7 +211,6 @@ public class LogoTextManager : MonoBehaviour
 
     public IEnumerator ChangeScene() 
     {
-        isLoadNextScene = true; 
         DeActivateAllVFX(); 
         yield return new WaitForSeconds(1f); 
         SoundManager.instance.PlaySFX("BusStart"); 
