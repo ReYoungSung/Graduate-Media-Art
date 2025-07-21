@@ -9,6 +9,10 @@ public class MagicWanding : MonoBehaviour
     private bool coolingDown = false;
     private float cooldownDuration = 0.75f; // ÄðÅ¸ÀÓ
 
+    private void Start()
+    {
+        logoTextManager.ChangeVFXColor(2);
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -21,16 +25,19 @@ public class MagicWanding : MonoBehaviour
             }
             else if (other.CompareTag("A"))
             {
+                logoTextManager.ChangeVFXColor(0);
                 AFunction();
                 StartCoroutine(StartCooldown());
             }
             else if (other.CompareTag("B"))
             {
+                logoTextManager.ChangeVFXColor(1);
                 BFunction();
                 StartCoroutine(StartCooldown());
             }
             else if (other.CompareTag("C"))
             {
+                logoTextManager.ChangeVFXColor(3);
                 CFunction();
                 StartCoroutine(StartCooldown());
             }

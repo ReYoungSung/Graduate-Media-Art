@@ -63,14 +63,17 @@ public class LogoTextManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha0)) //한동 로고일 때
         {
+            ChangeVFXColor(0);
             StartCoroutine(ActivateLogo(0));
         }
         else if (Input.GetKeyDown(KeyCode.Alpha1)) //고생했어
         {
+            ChangeVFXColor(1);
             StartCoroutine(ActivateLogo(1));
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2)) //말씀
         {
+            ChangeVFXColor(2);
             StartCoroutine(ActivateLogo(2));
         }
         else if (Input.GetKeyDown(KeyCode.KeypadEnter))
@@ -112,7 +115,7 @@ public class LogoTextManager : MonoBehaviour
             yield return new WaitForSeconds(3f); // 3초간 대기
             visualEffects[activedLogoNum].SetFloat("AnimationValue", 1);
             visualEffects[activedLogoNum].SetInt("SpawnRate", 50000);
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(7.5f);
             visualEffects[activedLogoNum].SetInt("SpawnRate", 10000);
                         
             ActivateAllVFX();

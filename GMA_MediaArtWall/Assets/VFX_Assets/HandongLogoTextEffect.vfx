@@ -1214,8 +1214,7 @@ MonoBehaviour:
   m_OutputSlots:
   - {fileID: 8926484042661614618}
   - {fileID: 8926484042661614619}
-  - {fileID: 8926484042661615373}
-  Asset: {fileID: -3256353808211938606, guid: 542a187c4c89e2849b5f5d98d533d66d, type: 3}
+  Asset: {fileID: -3256353808211938606, guid: 062d7ec43eef29746acc70ff4afbdbcf, type: 3}
 --- !u!114 &8926484042661614618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4341,7 +4340,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":0.4000000059604645,"y":3.0,"z":0.4000000059604645}'
+      m_SerializableObject: '{"x":0.4000000059604645,"y":4.0,"z":0.4000000059604645}'
     m_Space: 2147483647
   m_Property:
     name: Scale
@@ -6738,7 +6737,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 5
+      m_SerializableObject: 0.7
     m_Space: 2147483647
   m_Property:
     name: newRangeMin
@@ -6772,7 +6771,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 8
+      m_SerializableObject: 5
     m_Space: 2147483647
   m_Property:
     name: newRangeMax
@@ -10290,40 +10289,6 @@ MonoBehaviour:
   title: 
   m_Owners:
   - {fileID: 8926484042661614555}
---- !u!114 &8926484042661615373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70a331b1d86cc8d4aa106ccbe0da5852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UIIgnoredErrors: []
-  m_Parent: {fileID: 0}
-  m_Children: []
-  m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
-  m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661615373}
-  m_MasterData:
-    m_Owner: {fileID: 8926484042661614617}
-    m_Value:
-      m_Type:
-        m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: 
-    m_Space: 2147483647
-  m_Property:
-    name: 'AttributeMap : color'
-    m_serializedType:
-      m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  m_Direction: 1
-  m_LinkedSlots: []
 --- !u!114 &8926484042661615377
 MonoBehaviour:
   m_ObjectHideFlags: 0

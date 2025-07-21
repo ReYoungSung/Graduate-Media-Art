@@ -1214,7 +1214,7 @@ MonoBehaviour:
   m_OutputSlots:
   - {fileID: 8926484042661614618}
   - {fileID: 8926484042661614619}
-  Asset: {fileID: -3256353808211938606, guid: d00c100a855865648ae5d57a2e4bff96, type: 3}
+  Asset: {fileID: -3256353808211938606, guid: 603f4ce53b5c4814ea30ebd014e56ba7, type: 3}
 --- !u!114 &8926484042661614618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4340,7 +4340,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":0.4000000059604645,"y":3.0,"z":0.4000000059604645}'
+      m_SerializableObject: '{"x":0.4000000059604645,"y":4.0,"z":0.4000000059604645}'
     m_Space: 2147483647
   m_Property:
     name: Scale
@@ -6737,7 +6737,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 0.7
     m_Space: 2147483647
   m_Property:
     name: newRangeMin
