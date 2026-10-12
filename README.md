@@ -1,3 +1,5 @@
+**한국어** | [English](README.en.md)
+
 # Graduate-Media-Art — 활주로
 
 2024 한동대학교 졸업식을 위해 제작한 인터랙티브 미디어 아트 프로젝트입니다. Unity VFX와 OptiTrack 모션캡처를 활용하며, 대형 커브드 스크린 전시 환경을 전제로 합니다.
